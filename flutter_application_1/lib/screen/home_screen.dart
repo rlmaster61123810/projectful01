@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screen/example_screen.dart';
+import 'package:flutter_application_1/screen/from_screen.dart';
+import 'package:flutter_application_1/screen/list_view_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key key}) : super(key: key);
@@ -19,13 +22,53 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
         body: Center(
-          child: Container(
-            width: 150,
-            height: 150,
-            color: Colors.red,
-            child: Text(
-              "Hiso Koh kay",
-            ),
+          child: Column(
+            children: [
+              Container(
+                width: 150,
+                height: 150,
+                color: Colors.amberAccent,
+                child: Image.asset(
+                  'assets/images/cat.jpg',
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ListViewScreen(),
+                    ),
+                  );
+                },
+                child: Text("List View"),
+              ),
+
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => FormScreen(),
+                    ),
+                  );
+                },
+                
+                child: Text("Form"),
+              ),
+
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ExampleScreen(),
+                    ),
+                  );
+                },
+                child: Text("Example"),
+              ),
+            ],
           ),
         ),
       ),
