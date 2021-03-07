@@ -23,7 +23,7 @@ class _ExampleScreenState extends State<ExampleScreen> {
             children: [
               Container(
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Text("Medicines"),
                     PopupMenuButton(
@@ -42,10 +42,11 @@ class _ExampleScreenState extends State<ExampleScreen> {
                 ),
               ),
               Container(
-                child: Column(
+                child: Column
+                (
                   children: [
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                       Container(
                         width: 150,
@@ -53,19 +54,28 @@ class _ExampleScreenState extends State<ExampleScreen> {
                         color: Colors.red,
                         child: Column(
                           children: [
-                            IconButton(
+                            IconButton
+                            (
                               icon: Icon(Icons.medical_services),
                               onPressed: () {},
                             ),
-                            Text("Morning"),
+                            Text(
+                              "Morning",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                              ),
+                              ),
                           ],
                         ),
                       ),
                       Container(
+                        
                         width: 150,
                         height: 150,
                         color: Colors.green,
-                        child: Column(
+                        child: Column
+                        (
                           children: [
                             IconButton(
                               icon: Icon(Icons.medical_services),
@@ -78,8 +88,9 @@ class _ExampleScreenState extends State<ExampleScreen> {
                       ),
                     ]),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
+
                       Container(
                         width: 150,
                         height: 150,

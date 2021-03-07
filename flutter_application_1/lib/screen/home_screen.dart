@@ -66,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   );
                 },
-                child: Text("Example"),
+                child: Text("example"),
               ),
             ],
           ),
